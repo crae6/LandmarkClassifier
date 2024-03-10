@@ -11,4 +11,4 @@ To download the dataset we created the Python file LandmarkFilterer.py which tak
 
 Examples of our dataset's classes are provided below. 
 
-![image](https://github.com/crae6/LandmarkClassifier/assets/122562172/41eb63d9-68bf-4d2a-ad46-57f300c7b07d)
+![image](https://github.com/crae6/LandmarkClassifier/assets/122562172/4250050b-f3f4-45c3-b3c1-4c339d3baf64)
