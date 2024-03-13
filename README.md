@@ -12,3 +12,11 @@ To download the dataset we created the Python file LandmarkFilterer.py which tak
 Examples of our dataset's classes are provided below. 
 
 ![image](https://github.com/crae6/LandmarkClassifier/assets/122562172/4250050b-f3f4-45c3-b3c1-4c339d3baf64)
+
+## ResNet-10
+
+## AlexNet
+
+## VGG-16
+
+## ResNet-34
