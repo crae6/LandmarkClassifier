@@ -9,12 +9,15 @@ LABELS = ["Eiffel Tower", "Geisel Library", "Golden Gate Bridge", "Great Wall of
           "Mount Rushmore", "Niagara Falls", "Parthenon", "Pyramids of Giza", "Space Needle", "Stonehenge", "Sydney Opera House"]
 
 try:
-    alexnet = torch.jit.load(os.path.join('../Checkpoints/AlexNet.pt'))
-    alexnet.eval()
     resnet10 = torch.jit.load(os.path.join('../Checkpoints/ResNet10.pt'))
     resnet10.eval()
     resnet34 = torch.jit.load(os.path.join('../Checkpoints/ResNet34.pt'))
     resnet34.eval()
+    alexnet = torch.jit.load(os.path.join('../Checkpoints/AlexNet.pt'))
+    alexnet.eval()
+    # vgg = torch.jit.load(os.path.join('../Checkpoints/VGG16.pt'))
+    # vgg.eval()
+    
 except Exception as e:
     messagebox.showerror("Model Loading Error", f"Failed to load the model: {e}")
 
@@ -54,18 +57,22 @@ def upload_and_classify_image():
 
     try:
         with torch.no_grad():
-            prediction3 = alexnet(processed_img)
             prediction1 = resnet10(processed_img)
             prediction2 = resnet34(processed_img)
-            _, predicted3 = prediction3.max(1)
+            prediction3 = alexnet(processed_img)
+            # prediction4 = vgg(processed_img)
             _, predicted1 = prediction1.max(1)
             _, predicted2 = prediction2.max(1)
-            predicted3 = LABELS[predicted3.item()]
+            _, predicted3 = prediction3.max(1)
+            # _, predicted4 = prediction4.max(1)
             predicted1 = LABELS[predicted1.item()]
             predicted2 = LABELS[predicted2.item()]
-        result_label3.configure(text=f'AlexNet Prediction: {predicted3}')
+            predicted3 = LABELS[predicted3.item()]
+            # predicted4 = LABELS[predicted4.item()]
         result_label1.configure(text=f'ResNet10 Prediction: {predicted1}')
         result_label2.configure(text=f'ResNet34 Prediction: {predicted2}')
+        result_label3.configure(text=f'AlexNet Prediction: {predicted3}')
+        # result_label4.configure(text=f'VGG16 Prediction: {predicted4}')
     except Exception as e:
         messagebox.showerror("Prediction Error", f"Failed to make a prediction: {e}")
 
@@ -85,9 +92,9 @@ result_label1.pack(side="top")
 result_label2 = CTkLabel(frame_prediction, text='ResNet34 Prediction:')
 result_label2.pack(side="top")
 result_label3 = CTkLabel(frame_prediction, text='AlexNet Prediction:')
-result_label3.pack(side="bottom")
+result_label3.pack(side="top")
 result_label4 = CTkLabel(frame_prediction, text='VGG16 Prediction:')
-result_label4.pack(side="bottom")
+result_label4.pack(side="top")
 
 # Image Frame (Middle)
 frame_image = CTkFrame(root, corner_radius=10)
