@@ -7,18 +7,35 @@ A classification project of landmarks using different Neural Networks.
 
 https://github.com/cvdfoundation/google-landmark
 
-To download the dataset we created the Python file LandmarkFilterer.py which takes an input of Landmark ID's and iterates through the train.csv file (https://s3.amazonaws.com/google-landmark/metadata/train.csv) provided by the Google Landmark Dataset. This filtering file will download all of the images that match the Landmark ID's provided, download the image, and resize it to 256x256 pixels. 
+To download the dataset, we created the Python file LandmarkFilterer.py, which takes an input of Landmark IDs and iterates through the train.csv file (https://s3.amazonaws.com/google-landmark/metadata/train.csv) provided by the Google Landmark Dataset. This filtering file will download all of the images that match the Landmark IDs provided, download the image, and resize it to 256x256 pixels. 
 
 Examples of our dataset's classes are provided below. 
 
 ![image](https://github.com/crae6/LandmarkClassifier/assets/122562172/4250050b-f3f4-45c3-b3c1-4c339d3baf64)
 
-## ResNet-10
+## Models
+In this project, we explore the classification performance of various CCN networks and tailor them to best fit our data.
 
-## ResNet-34
+### ResNet-10
+Description: This was our first model and came from the homework implementation. We adjusted the padding to get higher accuracies with our classes. 
+Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+Accuracy: 87% Validation Accuracy
 
-## AlexNet
+### ResNet-34
+Description: A deeper version of ResNet that provides higher accuracy at the cost of increased computational complexity.
+Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+Accuracy: 
 
-## VGG-16
+### AlexNet
+Description: A pioneering convolutional neural network that first demonstrated the efficacy of deep learning in computer vision.
+Adapted for the landmark classification task with an input size of 256x256 pixels.
+Features modifications in the number of filters and the addition of Batch Normalization for stability.
+Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+Accuracy: 
+
+### VGG-16
+Description: A deep convolutional network known for its simplicity and depth.
+Training Details: batch size: 32, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+Accuracy: 
 
 ## GUI
