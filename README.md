@@ -17,7 +17,7 @@ Examples of our dataset's classes are provided below.
 In this project, we explore the classification performance of various CCN networks and tailor them to best fit our data.
 
 ### ResNet-10
-- Description: This was our first model and came from the homework implementation. We adjusted the padding to get higher accuracies with our classes. 
+- Description: This was our first model and came from the homework implementation. We adjusted the padding to get higher accuracies with our classes, but, overall, we found this to be a very fitting network.
 - Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
 - Accuracy: 87% Validation Accuracy
 
@@ -37,3 +37,4 @@ In this project, we explore the classification performance of various CCN networ
 - Accuracy: 
 
 ## GUI
+- Our graphical user interface allows the user to input an image from their computer, and each model will display its individual result.
