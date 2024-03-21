@@ -17,25 +17,23 @@ Examples of our dataset's classes are provided below.
 In this project, we explore the classification performance of various CCN networks and tailor them to best fit our data.
 
 ### ResNet-10
-Description: This was our first model and came from the homework implementation. We adjusted the padding to get higher accuracies with our classes. 
-Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
-Accuracy: 87% Validation Accuracy
+- Description: This was our first model and came from the homework implementation. We adjusted the padding to get higher accuracies with our classes. 
+- Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+- Accuracy: 87% Validation Accuracy
 
 ### ResNet-34
-Description: A deeper version of ResNet that provides higher accuracy at the cost of increased computational complexity.
-Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
-Accuracy: 
+- Description: A deeper version of ResNet that provides higher accuracy at the cost of increased computational complexity.
+- Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+- Accuracy: 
 
 ### AlexNet
-Description: A pioneering convolutional neural network that first demonstrated the efficacy of deep learning in computer vision.
-Adapted for the landmark classification task with an input size of 256x256 pixels.
-Features modifications in the number of filters and the addition of Batch Normalization for stability.
-Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
-Accuracy: 
+- Description:
+- Training Details: batch size: 64, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+- Accuracy: 
 
 ### VGG-16
-Description: A deep convolutional network known for its simplicity and depth.
-Training Details: batch size: 32, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
-Accuracy: 
+- Description: A deep convolutional network known for its simplicity and depth.
+- Training Details: batch size: 32, optimizer: SGD, learning rate: 0.002, weight decay: 0.0001, momentum: 0.9
+- Accuracy: 
 
 ## GUI
