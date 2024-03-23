@@ -38,3 +38,21 @@ In this project, we explore the classification performance of various CCN networ
 
 ## GUI
 - Our graphical user interface allows the user to input an image from their computer, and each model will display its individual result.
+
+## GUI Usage
+### Requirements
+- Python 3.7 or newer
+
+### Installation
+1. **Download**
+- First, download the zip file and unzip it
+2. **Create a Virtual Environment (Optional)**
+- python -m venv LandmarkClasGUI
+- Activate the virtual environment:
+    - On Windows:
+    `.\LandmarkClasGUI\Scripts\activate`
+    - On macOS and Linux:
+    `source LandmarkClasGUI/bin/activate`
+3. **Install Dependencies**
+- Install the required packages using 
+`pip install -r requirements.txt`
